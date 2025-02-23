@@ -1,7 +1,8 @@
+
 const mongoose = require("mongoose");
-const uri =
-  // "mongodb+srv://harshkr5247:sgDapfEl3fYHMPMV@cluster0.1zulvry.mongodb.net/e-commerce?retryWrites=true&w=majority";
-  "mongodb://0.0.0.0:27017/e-commerce";
+require("dotenv").config();
+const uri =process.env.MONGODB_URL
+
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
